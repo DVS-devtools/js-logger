@@ -3,19 +3,18 @@
  * @function init
  * @description Return the message + ' world'
  * @param {Object} options (see attributes below)
- * @param {String} [options.message=''] message to show
- * @returns {String} Your message + ' world'
+ * @param {String} [options.enable=false] enable/disable log
 
  *
  * @example
  * // Initialize JsLogger
- *  var foo = JsLogger.init({
- *      message: 'hello'
+ *  JsLogger.init({
+ *      enable: true
  *  });
- *  console.log(foo);
  */
 
+import Global from '../global';
+
 export default (options) => {
-    const newMessage = `${options.message} world`;
-    return newMessage;
+    Global.enable = options.enable;
 };

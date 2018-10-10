@@ -1,7 +1,7 @@
 import init from './index';
+import Global from '../global';
 
-test('init() returns message + " world"', () => {
-    const message = 'hello';
-    const returnedValue = init({ message });
-    expect(returnedValue).toBe(`${message} world`);
+test('init() set global value to true', () => {
+    init({enable: true});
+    expect(Global.enable).toBe(true);
 });
