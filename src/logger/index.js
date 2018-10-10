@@ -26,7 +26,6 @@ if (!enableLogger) {
     }
 }
 
-
 export default {
     debug: (...args) => {
         if (enableLogger) {
