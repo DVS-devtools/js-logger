@@ -1,5 +1,1 @@
-const Global = {
-    enable: false
-};
-
-export default Global;
+export default { enable: true };

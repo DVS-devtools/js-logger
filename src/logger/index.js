@@ -16,29 +16,19 @@ import Global from '../global';
  *  });
  */
 
-let enableLogger = Global.enable;
-
-if (!enableLogger) {
-    try {
-        enableLogger = window.localStorage.getItem('enable-logger');
-    } catch (e) {
-        console.warn(['LOGGER', 'Logger disabled']);
-    }
-}
-
 export default {
     debug: (...args) => {
-        if (enableLogger) {
+        if (Global.enable) {
             console.debug(args);
         }
     },
     info: (...args) => {
-        if (enableLogger) {
+        if (Global.enable) {
             console.info(args);
         }
     },
     log: (...args) => {
-        if (enableLogger) {
+        if (Global.enable) {
             console.log(args);
         }
     },
