@@ -130,7 +130,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * @memberof JsLogger
  * @function init
- * @description Return the message + ' world'
+ * @description Enable or disable logger for production environment. If set to false, only warnings 
+ * and error will be logged.
  * @param {Object} options (see attributes below)
  * @param {String} [options.enable=false] enable/disable log
 
@@ -158,22 +159,18 @@ var _global = _interopRequireDefault(require("../global"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * @memberof JsLogger
- * @function logger
- * @description Logger implementation
- * @param {Object} options (see attributes below)
- * @param {String} [options.message=''] message to show
- * @returns void
-
- *
- * @example
- * // Log JsLogger
- *  JsLogger.log({
- *      message: 'hello'
- *  });
- */
 var _default = {
+  /**
+   * @memberof JsLogger
+   * @function debug
+   * @description Debug message for debug logging
+   * @param {any} [args] Any params you want to log as debug
+   * @returns void
+   *
+  * @example
+  * // Debug JsLogger
+  *  JsLogger.debug(1, 'a', [1], {messasge: 'a message'}, true);
+  */
   debug: function debug() {
     if (_global.default.enable) {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -183,6 +180,18 @@ var _default = {
       console.debug(args);
     }
   },
+
+  /**
+   * @memberof JsLogger
+   * @function info
+   * @description Info message for info logging
+   * @param {any} [args] Any params you want to log as info
+   * @returns void
+   *
+  * @example
+  * // Info JsLogger
+  *  JsLogger.info(1, 'a', [1], {messasge: 'a message'}, true);
+  */
   info: function info() {
     if (_global.default.enable) {
       for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
@@ -192,6 +201,18 @@ var _default = {
       console.info(args);
     }
   },
+
+  /**
+   * @memberof JsLogger
+   * @function log
+   * @description Log message for log logging
+   * @param {any} [args] Any params you want to log as log
+   * @returns void
+   *
+  * @example
+  * // Log JsLogger
+  *  JsLogger.log(1, 'a', [1], {messasge: 'a message'}, true);
+  */
   log: function log() {
     if (_global.default.enable) {
       for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
@@ -201,6 +222,18 @@ var _default = {
       console.log(args);
     }
   },
+
+  /**
+   * @memberof JsLogger
+   * @function warn
+   * @description Warn message for warn logging
+   * @param {any} [args] Any params you want to log as warn
+   * @returns void
+   *
+  * @example
+  * // Warn JsLogger
+  *  JsLogger.warn(1, 'a', [1], {messasge: 'a message'}, true);
+  */
   warn: function warn() {
     for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
       args[_key4] = arguments[_key4];
@@ -208,6 +241,18 @@ var _default = {
 
     console.warn(args);
   },
+
+  /**
+   * @memberof JsLogger
+   * @function error
+   * @description Error message for error logging
+   * @param {any} [args] Any params you want to log as error
+   * @returns void
+   *
+  * @example
+  * // Error JsLogger
+  *  JsLogger.error(1, 'a', [1], {messasge: 'a message'}, true);
+  */
   error: function error() {
     for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
       args[_key5] = arguments[_key5];
@@ -233,7 +278,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * @class JsLogger
- * @description Description of your library
+ * @description JsLogger is an advanced logger used for stable production build. You can set
+ *  the enable value using the init function depending where you are.
+ *
+ * For example, using the node environment variables, you can decide to enable logger
+ *  only in a stage environment and disable it while you are in a production environment.
  */
 var _default = {
   /**
@@ -242,12 +291,28 @@ var _default = {
   init: _init.default,
 
   /**
-   * @see modules/log
+   * @see modules/debug
    */
   debug: _logger.default.debug,
+
+  /**
+   * @see modules/info
+   */
   info: _logger.default.info,
+
+  /**
+   * @see modules/log
+   */
   log: _logger.default.log,
+
+  /**
+   * @see modules/warn
+   */
   warn: _logger.default.warn,
+
+  /**
+   * @see modules/error
+   */
   error: _logger.default.error
 };
 exports.default = _default;
