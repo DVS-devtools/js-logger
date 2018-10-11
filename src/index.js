@@ -1,6 +1,9 @@
 /**
  * @class JsLogger
- * @description Description of your library
+ * @description JsLogger is an advanced logger used for stable production build. You can set
+ *  the enable value using the init function depending where you are.
+ * For example, using the node environment variables, you can decide to enable logger
+ *  only in a stage environment and disable it while you are in a production environment.
  */
 import init from './init';
 import logger from './logger';
