@@ -1,8 +1,31 @@
-import YourLibrary from '../src/index.js';
+import Logger from '../src/index.js';
+let message = '';
 
-const foo = YourLibrary.init({
-    message: 'hello'
-});
+const getMessage = () => {
+    message = document.getElementById('print-test').value;
+}
 
-document.write(foo);
-console.log(foo);
+window.jsDebug = () => {
+    getMessage();
+    Logger.debug(message)
+}
+
+window.jsInfo = () => {
+    getMessage();
+    Logger.info(message)
+}
+
+window.jsLog = () => {
+    getMessage();
+    Logger.log(message)
+}
+
+window.jsWarn = () => {
+    getMessage();
+    Logger.warn(message)
+}
+
+window.jsError = () => {
+    getMessage();
+    Logger.error(message)
+}
