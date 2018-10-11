@@ -3,7 +3,7 @@
  * @description Description of your library
  */
 import init from './init';
-import log from './log';
+import logger from './logger';
 
 export default {
     /**
@@ -13,5 +13,9 @@ export default {
     /**
      * @see modules/log
      */
-    log
+    debug: logger.debug,
+    info: logger.info,
+    log: logger.log,
+    warn: logger.warn,
+    error: logger.error,
 };
