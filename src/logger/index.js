@@ -4,7 +4,7 @@ export default {
     /**
      * @memberof JsLogger
      * @function debug
-     * @description Debug log for debug logging
+     * @description Debug logs for debug logging
      * @param  [args] Any params you want to log as debug
      * @returns void
 
@@ -22,7 +22,7 @@ export default {
     /**
      * @memberof JsLogger
      * @function info
-     * @description Info log for info logging
+     * @description Info logs for info logging
      * @param  [args] Any params you want to log as info
      * @returns void
 
@@ -40,7 +40,7 @@ export default {
     /**
      * @memberof JsLogger
      * @function log
-     * @description Log log for log logging
+     * @description Log logs for log logging
      * @param  [args] Any params you want to log as log
      * @returns void
 
@@ -58,7 +58,7 @@ export default {
     /**
      * @memberof JsLogger
      * @function warn
-     * @description Warn log for warn logging
+     * @description Warn logs for warn logging
      * @param  [args] Any params you want to log as warn
      * @returns void
 
@@ -74,7 +74,7 @@ export default {
     /**
      * @memberof JsLogger
      * @function error
-     * @description Error log for error logging
+     * @description Error logs for error logging
      * @param  [args] Any params you want to log as error
      * @returns void
 
