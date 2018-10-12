@@ -1,5 +1,7 @@
 
 # js-logger
+[![Greenkeeper badge](https://badges.greenkeeper.io/docomodigital/js-logger.svg)](https://greenkeeper.io/)
+
 JsLogger is an advanced logger used for stable production build. Is suggested to set the enable value using the init function depending where you are.
 
 For example, using the node environment variables, you can decide to enable logger only in a stage environment and disable it while you are in a production environment.
