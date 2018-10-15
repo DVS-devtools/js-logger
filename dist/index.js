@@ -130,7 +130,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * @memberof JsLogger
  * @function init
- * @description Enable or disable logger for production environment. If set to false, only warnings 
+ * @description Enable or disable logger for production environment. If set to false, only warnings
  * and error will be logged.
  * @param {Object} options (see attributes below)
  * @param {String} [options.enable=false] enable/disable log
@@ -153,115 +153,130 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.error = exports.warn = exports.log = exports.info = exports.debug = void 0;
 
 var _global = _interopRequireDefault(require("../global"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _default = {
-  /**
-   * @memberof JsLogger
-   * @function debug
-   * @description Debug message for debug logging
-   * @param {any} [args] Any params you want to log as debug
-   * @returns void
-   *
-  * @example
-  * // Debug JsLogger
-  *  JsLogger.debug(1, 'a', [1], {messasge: 'a message'}, true);
-  */
-  debug: function debug() {
-    if (_global.default.enable) {
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      console.debug(args);
-    }
-  },
-
-  /**
-   * @memberof JsLogger
-   * @function info
-   * @description Info message for info logging
-   * @param {any} [args] Any params you want to log as info
-   * @returns void
-   *
-  * @example
-  * // Info JsLogger
-  *  JsLogger.info(1, 'a', [1], {messasge: 'a message'}, true);
-  */
-  info: function info() {
-    if (_global.default.enable) {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      console.info(args);
-    }
-  },
-
-  /**
-   * @memberof JsLogger
-   * @function log
-   * @description Log message for log logging
-   * @param {any} [args] Any params you want to log as log
-   * @returns void
-   *
-  * @example
-  * // Log JsLogger
-  *  JsLogger.log(1, 'a', [1], {messasge: 'a message'}, true);
-  */
-  log: function log() {
-    if (_global.default.enable) {
-      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-        args[_key3] = arguments[_key3];
-      }
-
-      console.log(args);
-    }
-  },
-
-  /**
-   * @memberof JsLogger
-   * @function warn
-   * @description Warn message for warn logging
-   * @param {any} [args] Any params you want to log as warn
-   * @returns void
-   *
-  * @example
-  * // Warn JsLogger
-  *  JsLogger.warn(1, 'a', [1], {messasge: 'a message'}, true);
-  */
-  warn: function warn() {
-    for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
-      args[_key4] = arguments[_key4];
+/**
+ * @memberof JsLogger
+ * @function debug
+ * @description Debug message for debug logging
+ * @param {any} [args] Any params you want to log as debug
+ * @returns void
+ *
+ * @example
+ * // Debug JsLogger
+ *  JsLogger.debug(1, 'a', [1], {messasge: 'a message'}, true);
+ */
+var debug = function debug() {
+  if (_global.default.enable) {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
-    console.warn(args);
-  },
-
-  /**
-   * @memberof JsLogger
-   * @function error
-   * @description Error message for error logging
-   * @param {any} [args] Any params you want to log as error
-   * @returns void
-   *
-  * @example
-  * // Error JsLogger
-  *  JsLogger.error(1, 'a', [1], {messasge: 'a message'}, true);
-  */
-  error: function error() {
-    for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
-      args[_key5] = arguments[_key5];
-    }
-
-    console.error(args);
+    console.debug(args);
   }
 };
-exports.default = _default;
+/**
+ * @memberof JsLogger
+ * @function info
+ * @description Info message for info logging
+ * @param {any} [args] Any params you want to log as info
+ * @returns void
+
+ *
+ * @example
+ * // Info JsLogger
+ *  JsLogger.info(1, 'a', [1], {messasge: 'a message'}, true);
+ */
+
+
+exports.debug = debug;
+
+var info = function info() {
+  if (_global.default.enable) {
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    console.info(args);
+  }
+};
+/**
+ * @memberof JsLogger
+ * @function log
+ * @description Log message for log logging
+ * @param {any} [args] Any params you want to log as log
+ * @returns void
+
+ *
+ * @example
+ * // Log JsLogger
+ *  JsLogger.log(1, 'a', [1], {messasge: 'a message'}, true);
+ */
+
+
+exports.info = info;
+
+var log = function log() {
+  if (_global.default.enable) {
+    for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+      args[_key3] = arguments[_key3];
+    }
+
+    console.log(args);
+  }
+};
+/**
+ * @memberof JsLogger
+ * @function warn
+ * @description Warn message for warn logging
+ * @param {any} [args] Any params you want to log as warn
+ * @returns void
+
+ *
+ * @example
+ * // Warn JsLogger
+ *  JsLogger.warn(1, 'a', [1], {messasge: 'a message'}, true);
+ */
+
+
+exports.log = log;
+
+var warn = function warn() {
+  for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+    args[_key4] = arguments[_key4];
+  }
+
+  console.warn(args);
+};
+/**
+ * @memberof JsLogger
+ * @function error
+ * @description Error message for error logging
+ * @param {any} [args] Any params you want to log as error
+ * @returns void
+
+ *
+ * @example
+ * // Error JsLogger
+ *  JsLogger.error(1, 'a', [1], {messasge: 'a message'}, true);
+ */
+
+
+exports.warn = warn;
+
+var error = function error() {
+  for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+    args[_key5] = arguments[_key5];
+  }
+
+  console.error(args);
+};
+
+exports.error = error;
 },{"../global":"xFa0"}],"Focm":[function(require,module,exports) {
 "use strict";
 
@@ -270,9 +285,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _init = _interopRequireDefault(require("./init"));
+var _index = _interopRequireDefault(require("./init/index"));
 
-var _logger = _interopRequireDefault(require("./logger"));
+var _index2 = require("./logger/index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -280,40 +295,37 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @class JsLogger
  * @description JsLogger is an advanced logger used for stable production build. You can set
  *  the enable value using the init function depending where you are.
- *
- * For example, using the node environment variables, you can decide to enable logger
- *  only in a stage environment and disable it while you are in a production environment.
  */
 var _default = {
   /**
    * @see modules/init
    */
-  init: _init.default,
+  init: _index.default,
 
   /**
    * @see modules/debug
    */
-  debug: _logger.default.debug,
+  debug: _index2.debug,
 
   /**
    * @see modules/info
    */
-  info: _logger.default.info,
+  info: _index2.info,
 
   /**
    * @see modules/log
    */
-  log: _logger.default.log,
+  log: _index2.log,
 
   /**
    * @see modules/warn
    */
-  warn: _logger.default.warn,
+  warn: _index2.warn,
 
   /**
    * @see modules/error
    */
-  error: _logger.default.error
+  error: _index2.error
 };
 exports.default = _default;
-},{"./init":"W01G","./logger":"9SzV"}]},{},["Focm"], null)
+},{"./init/index":"W01G","./logger/index":"9SzV"}]},{},["Focm"], null)
