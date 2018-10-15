@@ -1,5 +1,5 @@
 import init from '../init/index';
-import Logger from './index';
+import Logger from '../index';
 
 describe('all logs with enabled: true', () => {
     beforeEach(() => {

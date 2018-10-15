@@ -1,7 +1,7 @@
 {
-  "name": "js-logger",
+  "name": "@docomodigital/js-fetcher",
   "version": "0.1.0",
-  "description": "",
+  "description": "Advanced logger used for stable production build",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
