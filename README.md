@@ -14,7 +14,7 @@ Using the node environment variables, you can decide to enable logger only in a 
 ```javascript
 // init jsLogger and disable it for production environment
 jsLogger.init({
-	enabled: process.env.NODE_ENV !== 'production';,
+	enable: process.env.NODE_ENV !== 'production';,
 });
 
 // debug function
