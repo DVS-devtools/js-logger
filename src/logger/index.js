@@ -1,5 +1,5 @@
 import Global from '../global';
-
+/* eslint-disable no-console */
 /**
  * @memberof JsLogger
  * @function debug
@@ -88,3 +88,4 @@ export const warn = (...args) => {
 export const error = (...args) => {
     console.error(args);
 };
+/* eslint-enable no-console */
